@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class AlignBehavior : MonoBehaviour {
     public Material coolMat;
     public GameObject indicator;
-    private Vector3 alignPosition;
+    public Vector3 alignPosition;
     public Text posText;
+    public Vector3 coordPosition;
    
 	// Use this for initialization
 	void Start () {
@@ -16,13 +17,15 @@ public class AlignBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        string displayTxt = "CurrentPos: " + (Camera.main.transform.position - alignPosition);
+        coordPosition = Camera.main.transform.position - alignPosition;
+        string displayTxt = "CurrentPos: " + coordPosition;
         posText.text = displayTxt;
     }
     public void aligned()
     {
         indicator.GetComponent<Renderer>().material = coolMat;
         alignPosition = Camera.main.transform.position;
+        indicator.SetActive(false);
 
 
     }

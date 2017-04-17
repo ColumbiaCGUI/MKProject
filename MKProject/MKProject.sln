@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKProject", "MKProject.csproj", "{157ED4F0-206C-DE87-7C26-87C817FFD218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKProject.Editor", "MKProject.Editor.csproj", "{CA467DA7-D8D0-44C7-517E-482DE1767321}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{157ED4F0-206C-DE87-7C26-87C817FFD218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157ED4F0-206C-DE87-7C26-87C817FFD218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157ED4F0-206C-DE87-7C26-87C817FFD218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157ED4F0-206C-DE87-7C26-87C817FFD218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA467DA7-D8D0-44C7-517E-482DE1767321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA467DA7-D8D0-44C7-517E-482DE1767321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA467DA7-D8D0-44C7-517E-482DE1767321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA467DA7-D8D0-44C7-517E-482DE1767321}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
