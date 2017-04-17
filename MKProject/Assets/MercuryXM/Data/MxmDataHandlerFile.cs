@@ -183,11 +183,13 @@ namespace MercuryXM.Data
         /// </summary>
         public virtual void Load()
         {
+            /*
             StreamReader r = File.OpenText(Path.Combine(FileLocation, FileName));
             Data = r.ReadToEnd();
             r.Close();
             MxmLogger.LogApplication("File read: " + FileName);
-        }
+            */    
+    }
 
         /// <summary>
         /// Will write header/open tag information.

@@ -429,8 +429,10 @@ namespace MercuryXM.Framework
                 if (!Dirty)
                 {
                     Dirty = true;
+                    /*
                     message.TimeStamp = DateTime.UtcNow.ToShortTimeString();
                     _prevMessageTime = message.TimeStamp;
+                    */
                 }
 
                 MxmNetworkBehavior.MxmInvoke (msgType, message);

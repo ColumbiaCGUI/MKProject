@@ -104,12 +104,13 @@ namespace MercuryXM.Framework
         /// <returns>Current sequence index after load.</returns>
         public virtual int LoadPartiallyFinishedTaskSequence()
         {
+            return 0;
+            /* IDK IF THIS WILL WORK
             if (!File.Exists(Path.Combine(MxmTaskUserData.DirPath, PartialDataFile)))
                 return 0;
-
+         
             var reader = new StreamReader(Path.Combine(MxmTaskUserData.DirPath, 
-                PartialDataFile), 
-                Encoding.UTF8);
+                PartialDataFile), Encoding.UTF8);
 
             string line = reader.ReadLine();
             if (line == null)
@@ -123,6 +124,7 @@ namespace MercuryXM.Framework
             reader.Close();
 
             return curSequenceIndex;
+            */
         }
 
         /// <summary>
@@ -133,6 +135,7 @@ namespace MercuryXM.Framework
         /// file. Can be empty if file unloaded.</param>
         public virtual void LoadTaskSequence(ref LinkedList<U> taskInfos)
         {
+            /*
 			var filename = MxmTaskUserData.BaseDirectory + "/" + TaskSeqFilename;
 
             try
@@ -163,6 +166,7 @@ namespace MercuryXM.Framework
                 MxmLogger.LogError("The file could not be read:");
                 MxmLogger.LogError(e.Message);
             }
+            */
         }
         
         /// <summary>
@@ -171,6 +175,7 @@ namespace MercuryXM.Framework
         /// <param name="seqVal">Current Sequence index value.</param>
         public virtual void SaveCurrentTaskSequenceValue(int seqVal)
         {
+            /*
             var writer = new StreamWriter(Path.Combine(MxmTaskUserData.DirPath, PartialDataFile), 
                 false, Encoding.UTF8);
             
@@ -178,7 +183,9 @@ namespace MercuryXM.Framework
             //TODO: Check if UserSequence is the right variable to write
 
             writer.Close();
+            */
         }
+
 
     }
 }

@@ -66,6 +66,7 @@ namespace MercuryXM.Support.FiniteStateMachine
         /// <param name="name"></param>
         public FiniteStateMachine(string name)
         {
+            /*
             Name = name;
 
             if (!typeof(T).IsEnum) return;
@@ -74,6 +75,7 @@ namespace MercuryXM.Support.FiniteStateMachine
             {
                 Add(val, new StateEvents());
             }
+        */
         }
 
         /// <summary>
