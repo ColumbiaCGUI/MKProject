@@ -488,6 +488,7 @@
     <Compile Include="Assets\MercuryXM\Widgets\TranslationWidgetBase.cs" />
     <Compile Include="Assets\MxmSimpleNetwork.cs" />
     <Compile Include="Assets\Scripts\AlignBehavior.cs" />
+    <Compile Include="Assets\TransformScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />

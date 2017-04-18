@@ -17,7 +17,8 @@ public class Initializer : MonoBehaviour
         NM.StartClient();
 #endif
         myStartClient();
-        
+        cnx.text = "Connect: " + NM.IsClientConnected();
+
     }
 
     // Update is called once per frame
