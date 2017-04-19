@@ -487,7 +487,10 @@
     <Compile Include="Assets\MercuryXM\Widgets\TranslationWidgetBase.cs" />
     <Compile Include="Assets\Scripts\AlignBehavior.cs" />
     <Compile Include="Assets\Scripts\Initializer.cs" />
+    <Compile Include="Assets\Scripts\LookAtUser.cs" />
     <Compile Include="Assets\Scripts\MxmSimpleNetwork.cs" />
+    <Compile Include="Assets\Scripts\PlaceMe.cs" />
+    <Compile Include="Assets\Scripts\RotateBehavior.cs" />
     <Compile Include="Assets\Scripts\TransformScript.cs" />
   </ItemGroup>
   <ItemGroup>

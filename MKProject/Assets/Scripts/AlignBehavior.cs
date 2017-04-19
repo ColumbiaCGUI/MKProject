@@ -27,6 +27,11 @@ public class AlignBehavior : MonoBehaviour {
         indicator.SetActive(false);
         localToWorld = createCoordSpace(Camera.main.transform.forward, Camera.main.transform.position);
         worldToLocal = localToWorld.inverse;
+
+        GameObject models = GameObject.Find("Models");
+        foreach (Transform child in models.transform){
+            child.GetComponent<PlaceMe>().placeObject(localToWorld);
+        }
     }
 
     Matrix4x4 createCoordSpace(Vector3 camDir, Vector3 camPos)
