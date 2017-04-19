@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class Initializer : MonoBehaviour
 {
-    //160.39.178.221c HL
+    //160.39.178.221 HL
     //160.39.166.238  Tango
     //Unknown message ID 1005 connId:1
     //UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()??
@@ -18,12 +18,9 @@ public class Initializer : MonoBehaviour
 	void Start ()
 	{
 #if !UNITY_EDITOR
-      // NM.StopClient();
-       // NM.StartClient();
+      NM.StopHost();
+      NM.StartHost();
 #endif
-        myStart();
-        cnx.text = "Connect: " + NM.IsClientConnected();
-
     }
 
     // Update is called once per frame
@@ -36,12 +33,4 @@ public class Initializer : MonoBehaviour
         
     }
 
-    public void myStart()
-    {
-        NM.StopServer();
-        NM.StartServer();
-       cnx.text = "Connect: " + NM.IsClientConnected();
-        ;
-
-    }
 }

@@ -124,7 +124,7 @@ MonoBehaviour:
   _mxmTag: -1
   tagCheckEnabled: 1
   otherPos: {fileID: 1962391228}
-  otherInd: {fileID: 30900864}
+  tango: {fileID: 30900864}
   AlignmentManager: {fileID: 859202010}
 --- !u!114 &19957310
 MonoBehaviour:
@@ -185,7 +185,7 @@ MonoBehaviour:
   tagCheckEnabled: 1
   SubMxmBehaviors:
     _list:
-    - Name: PositionSender
+    - Name: PositionManager
       Behavior: {fileID: 19957309}
       Clone: 0
       Tags: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82c563e5bf62b24eb2d0d0386a2dcaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cnx: {fileID: 819928558}
+  cnx: {fileID: 0}
   NM: {fileID: 1774113742}
 --- !u!1 &721064186
 GameObject:
@@ -486,12 +486,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000011042862180, guid: 022450106439a8946ae18a9e20cc92d8,
     type: 2}
   m_PrefabInternal: {fileID: 874504886}
---- !u!114 &819928558 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000010164638790, guid: 022450106439a8946ae18a9e20cc92d8,
-    type: 2}
-  m_PrefabInternal: {fileID: 874504886}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &859202010
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,31 +717,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RecognizerStart: 0
   KeywordsAndResponses:
-  - Keyword: Align
+  - Keyword: align
     KeyCode: 0
     Response:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 859202011}
           m_MethodName: aligned
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-  - Keyword: connect
-    KeyCode: 0
-    Response:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 581966843}
-          m_MethodName: myStart
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

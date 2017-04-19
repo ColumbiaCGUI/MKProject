@@ -11,13 +11,13 @@ public class MxmSimpleNetwork : MxmBaseBehavior
 {
     private Vector3 value;
     public Text otherPos;
-    public GameObject otherInd;
+    public GameObject tango;
     public GameObject AlignmentManager;
 
     // Use this for initialization
     void Start () {
 
-        otherInd.SetActive(false);
+        tango.SetActive(false);
 
     }
 
@@ -28,7 +28,12 @@ public class MxmSimpleNetwork : MxmBaseBehavior
 
     }
 
-    public void sendCoordinates() {
+    public void sendCoordinates()
+    {
+        InvokeRepeating("sendRoutine", 0.5f, 1.0f);
+    }
+
+    public void sendRoutine() {
             Debug.Log("sending");
             GameObject alignmentManager = GameObject.Find("AlignmentManager");
             AlignBehavior alignBehavior = alignmentManager.GetComponent<AlignBehavior>();
@@ -51,8 +56,8 @@ public class MxmSimpleNetwork : MxmBaseBehavior
                 string displayTxt = "TangoPos: " + msg.value;
                 otherPos.text = displayTxt;
 
-                otherInd.SetActive(true);
-                otherInd.transform.position = AlignmentManager.GetComponent<AlignBehavior>().alignPosition + msg.value;
+                tango.SetActive(true);
+                tango.transform.position = AlignmentManager.GetComponent<AlignBehavior>().localToWorld.MultiplyPoint3x4(msg.value);
                 break;
             default:
                 base.MxmInvoke(msgType, message);
