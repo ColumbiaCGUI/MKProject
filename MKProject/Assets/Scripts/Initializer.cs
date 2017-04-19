@@ -6,6 +6,11 @@ using UnityEngine.Networking;
 
 public class Initializer : MonoBehaviour
 {
+    //160.39.178.221c HL
+    //160.39.166.238  Tango
+    //Unknown message ID 1005 connId:1
+    //UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()??
+
     public Text cnx;
     public NetworkManager NM;
 
@@ -13,10 +18,10 @@ public class Initializer : MonoBehaviour
 	void Start ()
 	{
 #if !UNITY_EDITOR
-        NM.StopClient();
-        NM.StartClient();
+      // NM.StopClient();
+       // NM.StartClient();
 #endif
-        myStartClient();
+        myStart();
         cnx.text = "Connect: " + NM.IsClientConnected();
 
     }
@@ -31,11 +36,11 @@ public class Initializer : MonoBehaviour
         
     }
 
-    public void myStartClient()
+    public void myStart()
     {
-        NM.StopClient();
-        NM.StartClient();
-        cnx.text = "Connect: " + NM.IsClientConnected();
+        NM.StopServer();
+        NM.StartServer();
+       cnx.text = "Connect: " + NM.IsClientConnected();
         ;
 
     }

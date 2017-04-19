@@ -24,18 +24,17 @@ public class MxmSimpleNetwork : MxmBaseBehavior
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A) || Input.touchCount == 1) sendCoordinates();
 
     }
 
-    public void sendCoordinates() { 
-        if (Input.GetKeyDown(KeyCode.A) || Input.touchCount == 1)
-        {
+    public void sendCoordinates() {
+            Debug.Log("sending");
             GameObject alignmentManager = GameObject.Find("AlignmentManager");
             AlignBehavior alignBehavior = alignmentManager.GetComponent<AlignBehavior>();
             value = alignBehavior.coordPosition;
             Debug.Log(value);
             GetNode().MxmInvoke(MxmMethod.Vector3, value, MxmControlBlockHelper.SelfDefaultTagAll);
-        } 
     }
 
     public override void MxmInvoke(MxmMessageType msgType, Mxmessage message)

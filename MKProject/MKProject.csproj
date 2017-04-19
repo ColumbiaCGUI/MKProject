@@ -348,7 +348,6 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\PlaneTargetGroupPicker.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\TextToSpeechManagerTest.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Tests\Scripts\TextToSpeechOnTap.cs" />
-    <Compile Include="Assets\Initializer.cs" />
     <Compile Include="Assets\MercuryXM\AppState\MxmAppStateBehavior.cs" />
     <Compile Include="Assets\MercuryXM\AppState\MxmAppStateNode.cs" />
     <Compile Include="Assets\MercuryXM\AppState\MxmAppStateSwitchBehavior.cs" />
@@ -486,9 +485,10 @@
     <Compile Include="Assets\MercuryXM\Widgets\TargetInfo.cs" />
     <Compile Include="Assets\MercuryXM\Widgets\TransformationWidgetBase.cs" />
     <Compile Include="Assets\MercuryXM\Widgets\TranslationWidgetBase.cs" />
-    <Compile Include="Assets\MxmSimpleNetwork.cs" />
     <Compile Include="Assets\Scripts\AlignBehavior.cs" />
-    <Compile Include="Assets\TransformScript.cs" />
+    <Compile Include="Assets\Scripts\Initializer.cs" />
+    <Compile Include="Assets\Scripts\MxmSimpleNetwork.cs" />
+    <Compile Include="Assets\Scripts\TransformScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />
