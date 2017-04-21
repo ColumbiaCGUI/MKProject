@@ -491,7 +491,10 @@
     <Compile Include="Assets\Scripts\MxmSimpleNetwork.cs" />
     <Compile Include="Assets\Scripts\PlaceMe.cs" />
     <Compile Include="Assets\Scripts\RotateBehavior.cs" />
+    <Compile Include="Assets\Scripts\ShowMoreStuff.cs" />
     <Compile Include="Assets\Scripts\TransformScript.cs" />
+    <Compile Include="Assets\ToggleVis.cs" />
+    <Compile Include="Assets\seeMore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />

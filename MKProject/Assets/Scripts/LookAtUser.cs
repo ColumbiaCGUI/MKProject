@@ -11,7 +11,8 @@ public class LookAtUser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(Camera.main.transform.position);
-        transform.RotateAround(Vector3.up, 180);
+        Vector3 lookto = new Vector3(Camera.main.transform.position[0], 0, Camera.main.transform.position[2]);
+        transform.LookAt(lookto);
+        transform.RotateAround(Vector3.up, 110);
 	}
 }
